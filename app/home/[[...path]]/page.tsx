@@ -16,5 +16,5 @@ export async function generateMetadata() {
 }
 
 export default async function ProductHome() {
-  return <Landing product={await product()} />;
+  return <Landing product={await product()}  />;
 }
