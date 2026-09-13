@@ -1,4 +1,11 @@
-export type ProductKey = "flyst" | "nexyst" | "chatyst" | "canvyst" | "flintyst";
+export type ProductKey =
+  | "flyst"
+  | "nexyst"
+  | "chatyst"
+  | "canvyst"
+  | "flintyst"
+  | "postyst"
+  | "handyst";
 
 export type Product = {
   key: ProductKey;
@@ -101,5 +108,39 @@ export const products: Record<ProductKey, Product> = {
     ],
     process: [{ title: "Connect", body: "Sync the sources you use." }, { title: "Index", body: "Make meaning searchable." }, { title: "Retrieve", body: "Find the passages that bear." }, { title: "Answer", body: "Explain from those passages." }, { title: "Verify", body: "Check against the citation." }],
     metrics: [{ value: "01", label: "question, every source" }, { value: "Cited", label: "answers by default" }, { value: "Live", label: "index across tools" }],
+  },
+  postyst: {
+    key: "postyst", name: "Postyst", category: "Social publishing platform",
+    tagline: "Draft once, publish everywhere.",
+    headline: "Plan the whole calendar.", emphasis: "Publish everywhere.",
+    description: "Draft once, schedule across every channel, and keep the whole team's publishing calendar in one place.",
+    appUrl: "https://postyst.techyst.net/", foundation: "Postiz", status: "Channels connected",
+    capabilities: [
+      { title: "One composer", body: "Write a post once and adapt it per network without rewriting it from scratch.", signal: "COMPOSE" },
+      { title: "Shared calendar", body: "See everything scheduled across every channel on a single timeline.", signal: "PLAN" },
+      { title: "Every major channel", body: "Connect the networks the team actually publishes to and post to them together.", signal: "REACH" },
+      { title: "Approvals", body: "Route drafts for review before anything reaches a public account.", signal: "REVIEW" },
+      { title: "Performance", body: "Read what each post did after it went out, per channel and per campaign.", signal: "MEASURE" },
+      { title: "Automation and API", body: "Queue, repeat, and integrate publishing with the rest of your stack.", signal: "AUTOMATE" },
+    ],
+    process: [{ title: "Draft", body: "Write the post once." }, { title: "Adapt", body: "Shape it per channel." }, { title: "Schedule", body: "Place it on the calendar." }, { title: "Publish", body: "Ship to every account." }, { title: "Learn", body: "Read what it did." }],
+    metrics: [{ value: "01", label: "calendar for every channel" }, { value: "Live", label: "publishing pipeline" }, { value: "\u221e", label: "scheduled posts" }],
+  },
+  handyst: {
+    key: "handyst", name: "Handyst", category: "AI software agent",
+    tagline: "Describe the change, review the pull request.",
+    headline: "Describe the change.", emphasis: "Get the pull request.",
+    description: "An AI agent that reads your codebase, writes the change, runs the tests, and opens the pull request for review.",
+    appUrl: "https://handyst.techyst.net/", foundation: "OpenHands", status: "Agent ready",
+    capabilities: [
+      { title: "Reads the repository", body: "Works from the code as it actually is, not from a description of it.", signal: "CONTEXT" },
+      { title: "Writes and edits", body: "Makes the change across the files it touches, not one snippet at a time.", signal: "BUILD" },
+      { title: "Runs commands", body: "Executes builds, tests, and tooling in a sandbox, then reacts to the output.", signal: "EXECUTE" },
+      { title: "Opens pull requests", body: "Hands work back the way your team already reviews it.", signal: "DELIVER" },
+      { title: "Isolated runtime", body: "Every session runs in its own container, so an agent cannot reach past its task.", signal: "CONTAIN" },
+      { title: "Self-hosted", body: "Run the agent and its runtime on infrastructure you control.", signal: "CONTROL" },
+    ],
+    process: [{ title: "Describe", body: "State the change in plain words." }, { title: "Explore", body: "The agent reads the code." }, { title: "Change", body: "It edits across the repo." }, { title: "Verify", body: "It runs the tests." }, { title: "Review", body: "You get a pull request." }],
+    metrics: [{ value: "01", label: "sandbox per session" }, { value: "PR", label: "shaped output" }, { value: "Any", label: "language in the repo" }],
   },
 };
