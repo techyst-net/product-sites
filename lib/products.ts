@@ -103,15 +103,3 @@ export const products: Record<ProductKey, Product> = {
     metrics: [{ value: "01", label: "question, every source" }, { value: "Cited", label: "answers by default" }, { value: "Live", label: "index across tools" }],
   },
 };
-
-// The app is served from one hostname (space.techyst.net) and each product has
-// its own path, so this only matters for older per-product hostnames that may
-// still point here; anything unrecognised falls through to Flyst.
-export function productFromHost(host: string | null): Product {
-  const clean = (host || "").split(":")[0].toLowerCase();
-  if (clean.startsWith("nexyst.")) return products.nexyst;
-  if (clean.startsWith("chatyst.") || clean.startsWith("chattyst.")) return products.chatyst;
-  if (clean.startsWith("canvyst.") || clean.startsWith("canvasyst.")) return products.canvyst;
-  if (clean.startsWith("flintyst.") || clean.startsWith("search.")) return products.flintyst;
-  return products.flyst;
-}

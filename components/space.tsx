@@ -19,6 +19,7 @@ export function Space() {
       <nav aria-label="Primary navigation">
         <a href="#apps">Apps</a>
         <a href="#approach">Approach</a>
+        <a href="https://www.techyst.net">Techyst.net ↗</a>
         <a href="mailto:sales@techyst.net">Contact</a>
       </nav>
       <a className="navCta" href="#apps">Browse the apps <span>↓</span></a>
@@ -137,7 +138,8 @@ export function Space() {
           {order.map((product) => <a key={product.key} href={`/${product.key}`}>{product.name}</a>)}
         </div>
         <div>
-          <h3>Contact</h3>
+          <h3>Techyst</h3>
+          <a href="https://www.techyst.net">Main site ↗</a>
           <a href="mailto:sales@techyst.net">Sales</a>
           <a href="mailto:support@techyst.net">Support</a>
         </div>
