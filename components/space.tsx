@@ -8,6 +8,8 @@ const order: Product[] = [
   products.chatyst,
   products.canvyst,
   products.flintyst,
+  products.postyst,
+  products.handyst,
 ];
 
 const MAIN_SITE = "https://www.techyst.net";
@@ -57,9 +59,10 @@ function SpaceHero() {
     <section className="spaceHero">
       <div className="shell">
         <p className="eyebrow"><i />The Techyst product family</p>
-        <h1>Five products your team<br /><em>actually owns.</em></h1>
+        <h1>Seven products your team<br /><em>actually owns.</em></h1>
         <p className="spaceLede">
-          Resource planning, delivery, customer conversations, documents and search.
+          Resource planning, delivery, customer conversations, documents, search,
+          social publishing, and software agents.
           Each one a serious product. All of them running on infrastructure you control,
           with no per-seat licence growing underneath you.
         </p>
@@ -81,7 +84,7 @@ function HeroWindow() {
       <div className="heroWindowBar">
         <span><i /><i /><i /></span>
         <small>techyst — workspace</small>
-        <b>5 products connected</b>
+        <b>7 products connected</b>
       </div>
       <div className="heroWindowBody">
         <aside>
@@ -111,7 +114,7 @@ function MarkStrip() {
   return (
     <section className="markStrip">
       <div className="shell">
-        <p>One family, five surfaces</p>
+        <p>One family, seven surfaces</p>
         <div>
           {order.map((product) => (
             <a key={product.key} href={`#${product.key}`}>
@@ -127,7 +130,7 @@ function MarkStrip() {
 
 function SpaceMetrics() {
   const metrics = [
-    { value: "05", label: "products in the family" },
+    { value: "07", label: "products in the family" },
     { value: "100%", label: "self-hosted, your infrastructure" },
     { value: "0", label: "per-seat licences" },
   ];
@@ -250,7 +253,7 @@ function WhySection() {
         <p><span>01</span> Why own the stack</p>
         <div>
           <h2>Software you run,<br />not software you rent.</h2>
-          <p>Most teams end up renting five disconnected SaaS products, paying per seat, and storing their operating history on someone else&apos;s servers. This is the other option.</p>
+          <p>Most teams end up renting disconnected SaaS products, paying per seat, and storing their operating history on someone else&apos;s servers. This is the other option.</p>
         </div>
       </div>
       <div className="reasonGrid">
@@ -303,7 +306,7 @@ function ProcessSection() {
 
 const faqs = [
   {
-    q: "Do I have to take all five?",
+    q: "Do I have to take all seven?",
     a: "No. Each product runs standalone and is useful on its own. Most teams start with one and add the next when a real need shows up.",
   },
   {
@@ -355,7 +358,7 @@ function ClosingCta() {
       <div className="shell">
         <p>Techyst Space</p>
         <h2>Start with one.<br />Grow into the stack.</h2>
-        <p className="spaceClosingLede">Tell us what is slowing the team down and we will tell you which of the five actually helps — or whether none of them do.</p>
+        <p className="spaceClosingLede">Tell us what is slowing the team down and we will tell you which of the seven actually helps — or whether none of them do.</p>
         <div className="actions">
           <a className="primary" href="mailto:team@techyst.net">Book a walkthrough <span>↗</span></a>
           <a className="secondary" href="#products">Browse the products</a>

@@ -2,7 +2,7 @@
 
 One Next.js application serves the Techyst hub and every product landing page.
 
-- `/` is the hub: all five products on one page.
+- `/` is the hub: all seven products on one page.
 - `/<product>` renders one product directly (`/nexyst`, `/flintyst`, ...).
 
 The product hostnames serve only the applications; the sites live here.

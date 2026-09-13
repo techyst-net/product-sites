@@ -3,7 +3,7 @@
  * Warm paper, ink, a single earthy accent per product, a display serif for
  * anything that carries a voice and a neutral sans for everything functional.
  * Products share the whole system and differ only in `--tint`, so the family
- * reads as one set of tools rather than five unrelated sites. */
+ * reads as one set of tools rather than seven unrelated sites. */
 
 :root {
   /* Surfaces, warm rather than blue-grey. */
@@ -36,6 +36,8 @@
 .chatyst  { --tint: #4e7482; --tint-soft: #e4edf0; }
 .canvyst  { --tint: #8a6a90; --tint-soft: #efe8f1; }
 .flintyst { --tint: #a67a3c; --tint-soft: #f4ecdd; }
+.postyst  { --tint: #315f9e; --tint-soft: #e5edf7; }
+.handyst  { --tint: #346fba; --tint-soft: #e5eef9; }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
