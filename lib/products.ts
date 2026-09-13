@@ -5,7 +5,8 @@ export type ProductKey =
   | "canvyst"
   | "flintyst"
   | "postyst"
-  | "handyst";
+  | "handyst"
+  | "finyst";
 
 export type Product = {
   key: ProductKey;
@@ -142,5 +143,22 @@ export const products: Record<ProductKey, Product> = {
     ],
     process: [{ title: "Describe", body: "State the change in plain words." }, { title: "Explore", body: "The agent reads the code." }, { title: "Change", body: "It edits across the repo." }, { title: "Verify", body: "It runs the tests." }, { title: "Review", body: "You get a pull request." }],
     metrics: [{ value: "01", label: "sandbox per session" }, { value: "PR", label: "shaped output" }, { value: "Any", label: "language in the repo" }],
+  },
+  finyst: {
+    key: "finyst", name: "Finyst", category: "Payments orchestration",
+    tagline: "One integration, every processor.",
+    headline: "Route every payment", emphasis: "to whoever should take it.",
+    description: "Connect once, then route, retry and reconcile payments across every processor from a single control plane.",
+    appUrl: "https://finyst.techyst.net/", foundation: "Hyperswitch", status: "Processors connected",
+    capabilities: [
+      { title: "One integration", body: "Connect to many processors through a single API instead of rebuilding per provider.", signal: "CONNECT" },
+      { title: "Smart routing", body: "Send each payment to the processor best placed to authorise it, by rule or by volume.", signal: "ROUTE" },
+      { title: "Automatic retries", body: "Recover a declined payment on another processor rather than losing the sale.", signal: "RECOVER" },
+      { title: "Unified reporting", body: "Read authorisation, settlement and refund data across providers in one place.", signal: "MEASURE" },
+      { title: "Vaulting", body: "Store payment methods once and reuse them across processors without re-collecting.", signal: "VAULT" },
+      { title: "Self-hosted", body: "Run the payment path on infrastructure you control, with your own database.", signal: "CONTROL" },
+    ],
+    process: [{ title: "Connect", body: "Add your processors." }, { title: "Route", body: "Decide who takes each payment." }, { title: "Authorise", body: "Collect through one API." }, { title: "Retry", body: "Recover the declines." }, { title: "Reconcile", body: "Settle against one ledger." }],
+    metrics: [{ value: "01", label: "integration, many processors" }, { value: "Live", label: "routing decisions" }, { value: "PCI", label: "scope kept contained" }],
   },
 };
