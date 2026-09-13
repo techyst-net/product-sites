@@ -9,5 +9,4 @@ The product hostnames serve only the applications; the sites live here.
 
 
 Run locally with `npm run dev`. Production is Vercel
-(`techyst-product-sites`); Caddy proxies the `/home` paths above to that
-deployment, so there is nothing to deploy on the EC2 box.
+(`techyst-product-sites`). Nothing is deployed on the EC2 box.
