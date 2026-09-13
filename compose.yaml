@@ -1,0 +1,8 @@
+name: techyst-product-sites
+services:
+  web:
+    build: .
+    image: techyst-product-sites:local
+    ports:
+      - 127.0.0.1:8184:3000
+    restart: unless-stopped
